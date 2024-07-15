@@ -1,2 +1,2 @@
 # WORK.UA-TASKS
-Solutions to the test problem from work.ua
+I just can`t live without Readme and License XD
