@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "work-ua-tasks"
+version = "0.1.0"
+description = "None"
+authors = ["salko-ua <chips69jamil69game@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "work"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.32.3"
+aiohttp = "^3.9.5"
+tabulate = "^0.9.0"
+bs4 = "^0.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
