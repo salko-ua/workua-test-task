@@ -1,5 +1,6 @@
 # WORK.UA-TASKS
-I just can`t live without Readme and License XD
-
-# Project uses poetry
-
+Run commands
+```bash
+    poetry install
+    python -m src
+```

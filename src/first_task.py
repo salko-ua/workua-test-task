@@ -8,13 +8,13 @@ from tabulate import tabulate
 @dataclasses.dataclass
 class CountryInfo(list):
     name: str
-    capital: list | None
+    capital: str | None
     flag_png: str
 
     @classmethod
     def from_dict(cls, dict_: dict) -> t.Self:
         try:
-            capital = dict_["capital"]
+            capital = ", ".join(dict_["capital"])
         except KeyError:
             capital = None
 
@@ -22,7 +22,7 @@ class CountryInfo(list):
 
 
 class Country:
-    def __init__(self, url):
+    def __init__(self, url: str) -> None:
         self.url = url
 
     async def get_all_country(self) -> dict:
@@ -36,7 +36,7 @@ class Country:
             countries.append(CountryInfo.from_dict(country))
         return countries
 
-    async def get_tabular_form(self):
+    async def get_tabular_form(self) -> str:
         return tabulate(await self.get_countries(), headers=["Name", "Capital", "Flag PNG"])
 
 
